@@ -30,9 +30,9 @@ public class GameSimulator {
                         play = bot.playTurn();
                     }
                     long end = System.nanoTime();
-                    long durationInMS = Math.round((float)(end - start) / 1_000_000);
+                    double durationInMS = (float)(end - start) / 1_000_000;
 
-                    writer.write("%d,%s,%b,%d,%d".formatted(
+                    writer.write("%d,%s,%b,%f,%d".formatted(
                             i,
                             "Random",
                             play == GameOutcome.VICTORY,
